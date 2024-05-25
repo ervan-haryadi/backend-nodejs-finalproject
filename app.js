@@ -10,7 +10,7 @@ const SECRET_KEY = 'your_secret_key';
 
 mongoose.set('strictQuery', false);
 
-const uriLocal = "mongodb://localhost:27017";
+const uriLocal = "mongodb://mongodb:27017";
 const uriCloud = "mongodb://root:<password>@localhost:27017";
 mongoose.connect(uriLocal, { 'dbName': 'SocialDB' });
 
