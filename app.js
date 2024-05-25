@@ -10,8 +10,9 @@ const SECRET_KEY = 'your_secret_key';
 
 mongoose.set('strictQuery', false);
 
-const uri = "mongodb://root:<replace password>@localhost:27017";
-mongoose.connect(uri, { 'dbName': 'SocialDB' });
+const uriLocal = "mongodb://localhost:27017";
+const uriCloud = "mongodb://root:<password>@localhost:27017";
+mongoose.connect(uriLocal, { 'dbName': 'SocialDB' });
 
 const User = mongoose.model('User', { username: String, email: String, password: String });
 const Post = mongoose.model('Post', { userId: mongoose.Schema.Types.ObjectId, text: String });
